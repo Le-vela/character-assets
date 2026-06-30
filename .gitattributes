@@ -1,0 +1,5 @@
+
+# private-image-filter:start
+**/winlose_khan.glb filter=private-image -diff -merge
+**/winlose_bgj.glb filter=private-image -diff -merge
+# private-image-filter:end
