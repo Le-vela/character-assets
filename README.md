@@ -1,5 +1,7 @@
 ﻿# character-assets
 
+![MaAM LR and LF card preview](card/compare-card/lr_lf_batch_preview.jpg)
+
 This repository stores character asset files. Some large GLB assets are locked before publishing so their file names remain visible on GitHub, but their binary contents cannot be previewed or opened without the password.
 
 ## Locked GLB files
@@ -57,3 +59,4 @@ powershell -ExecutionPolicy Bypass -File .\protect-private-images.ps1 -ListPath 
 ```
 
 This creates `.enc` files next to originals. `.enc` files are ignored by default in this repository.
+
