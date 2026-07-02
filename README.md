@@ -60,3 +60,4 @@ powershell -ExecutionPolicy Bypass -File .\protect-private-images.ps1 -ListPath 
 
 This creates `.enc` files next to originals. `.enc` files are ignored by default in this repository.
 
+# character-assets
