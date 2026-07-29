@@ -1,0 +1,6 @@
+# Encrypt matching image files by listing one file name per line.
+# Blank lines and lines starting with # are ignored.
+#
+# Examples:
+# 002_dnj.png
+# 16_udn_fot_v2.png
