@@ -1,25 +1,40 @@
 # minimirok 2026년 8월호
 
-## No. 1. 갓나온 우유 식빵
+한 달의 음식 기록을 아홉 개의 창으로 먼저 바라봅니다. 각 사진을 누르면 해당 주차의 연재로 이어집니다.
 
-베이커리의 가장 정석적인 빵인 우유 식빵으로 만미록의 첫 기록을 시작한다.
+<table>
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <a href="./7.27-8.2/README.md"><img src="./7.27-8.2/no-001_fresh-milk-bread.png" width="220" alt="No. 1. 갓나온 우유 식빵"></a><br>
+      <sub>No. 1. 갓나온 우유 식빵</sub>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <a href="./7.27-8.2/README.md"><img src="./7.27-8.2/no-002_melon-bread-v6.png" width="220" alt="No. 2. 메론빵"></a><br>
+      <sub>No. 2. 메론빵</sub>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <a href="./8.3-8.9/README.md"><img src="./8.3-8.9/no-003_baguette-v2.png" width="220" alt="No. 3. 바게트"></a><br>
+      <sub>No. 3. 바게트</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <a href="./8.3-8.9/README.md"><img src="./8.3-8.9/no-004_madeleine.png" width="220" alt="No. 4. 마들렌"></a><br>
+      <sub>No. 4. 마들렌</sub>
+    </td>
+    <td align="center" valign="middle" width="33%"><br><br><sub>No. 5.<br>다음 기록</sub><br><br></td>
+    <td align="center" valign="middle" width="33%"><br><br><sub>No. 6.<br>다음 기록</sub><br><br></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" width="33%"><br><br><sub>No. 7.<br>다음 기록</sub><br><br></td>
+    <td align="center" valign="middle" width="33%"><br><br><sub>No. 8.<br>다음 기록</sub><br><br></td>
+    <td align="center" valign="middle" width="33%"><br><br><sub>No. 9.<br>다음 기록</sub><br><br></td>
+  </tr>
+</table>
 
-![No. 1. 갓나온 우유 식빵](./no-001_fresh-milk-bread.png)
+## 주차별 연재
 
-## No. 2. 메론빵
+- [7.27-8.2 — No. 1–2](./7.27-8.2/README.md)
+- [8.3-8.9 — No. 3–4](./8.3-8.9/README.md)
 
-참고 빵의 비정형 외곽과 자연스럽게 갈라진 녹색 쿠키 껍질을 나무 도우판 위 실제 촬영 모드로 담은 메론빵.
-
-![No. 2. 메론빵](./no-002_melon-bread-v6.png)
-
-## No. 3. 바게트
-
-길고 가는 생지 위로 겹쳐 열린 칼집과 얇고 바삭한 껍질을 길쭉한 라탄 바구니 안에 담은 바게트.
-
-![No. 3. 바게트](./no-003_baguette-v2.png)
-
-## No. 4. 마들렌
-
-베이지 포장지 안에 여섯 개를 가지런히 담고, 두 개를 뒤집어 실제 마들렌의 봉긋한 배꼽과 은은한 레몬 향을 표현한 마들렌.
-
-![No. 4. 마들렌](./no-004_madeleine.png)
+[Idea Note](./ideanote.md)
