@@ -26,7 +26,10 @@
       <a href="./8.3-8.9/README.md"><img src="./8.3-8.9/no-005_strawberry-cream-croissant-v3.png" width="220" alt="No. 5. 생크림 딸기 크루아상"></a><br>
       <sub>No. 5. 생크림 딸기 크루아상</sub>
     </td>
-    <td align="center" valign="middle" width="33%"><br><br><sub>No. 6.<br>다음 기록</sub><br><br></td>
+    <td align="center" valign="top" width="33%">
+      <a href="./8.3-8.9/README.md"><img src="./8.3-8.9/no-006_pain-de-campagne.png" width="220" alt="No. 6. 깜바뉴"></a><br>
+      <sub>No. 6. 깜바뉴</sub>
+    </td>
   </tr>
   <tr>
     <td align="center" valign="middle" width="33%"><br><br><sub>No. 7.<br>다음 기록</sub><br><br></td>
@@ -38,6 +41,6 @@
 ## 주차별 연재
 
 - [7.27-8.2 — No. 1–2](./7.27-8.2/README.md)
-- [8.3-8.9 — No. 3–5](./8.3-8.9/README.md)
+- [8.3-8.9 — No. 3–6](./8.3-8.9/README.md)
 
 [Idea Note](./ideanote.md)
