@@ -32,7 +32,10 @@
     </td>
   </tr>
   <tr>
-    <td align="center" valign="middle" width="33%"><br><br><sub>No. 7.<br>다음 기록</sub><br><br></td>
+    <td align="center" valign="top" width="33%">
+      <a href="./8.3-8.9/README.md"><img src="./8.3-8.9/no-007_snow-mont-blanc.png" width="220" alt="No. 7. 눈꽃 몽블랑"></a><br>
+      <sub>No. 7. 눈꽃 몽블랑</sub>
+    </td>
     <td align="center" valign="middle" width="33%"><br><br><sub>No. 8.<br>다음 기록</sub><br><br></td>
     <td align="center" valign="middle" width="33%"><br><br><sub>No. 9.<br>다음 기록</sub><br><br></td>
   </tr>
@@ -41,6 +44,6 @@
 ## 주차별 연재
 
 - [7.27-8.2 — No. 1–2](./7.27-8.2/README.md)
-- [8.3-8.9 — No. 3–6](./8.3-8.9/README.md)
+- [8.3-8.9 — No. 3–7](./8.3-8.9/README.md)
 
 [Idea Note](./ideanote.md)

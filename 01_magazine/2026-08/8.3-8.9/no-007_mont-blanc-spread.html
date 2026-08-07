@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No. 7. 눈꽃 몽블랑 — 몽블랑을 굽는 법</title>
+  <style>
+    :root {
+      --paper: #f4f1ea;
+      --ink: #11100e;
+      --muted: #6f6a62;
+      --amber: #a34d20;
+      --hairline: rgba(17, 16, 14, 0.3);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--ink);
+      background: #c9c4ba;
+      font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    }
+
+    .spread {
+      position: relative;
+      width: min(100%, 1587px);
+      aspect-ratio: 420 / 297;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(169, 84, 32, 0.055), transparent 28%),
+        linear-gradient(90deg, transparent calc(50% - 1px), rgba(23, 21, 18, 0.16) 50%, transparent calc(50% + 1px)),
+        var(--paper);
+      box-shadow: 0 24px 70px rgba(20, 16, 11, 0.28);
+    }
+
+    .spread::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.25;
+      background-image: radial-gradient(rgba(30, 24, 18, 0.22) 0.4px, transparent 0.4px);
+      background-size: 5px 5px;
+      mix-blend-mode: multiply;
+    }
+
+    .kicker {
+      position: absolute;
+      left: 3.4%;
+      top: 3.2%;
+      margin: 0;
+      font-size: clamp(7px, 0.72vw, 12px);
+      font-weight: 500;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+    }
+
+    .number {
+      position: absolute;
+      left: 42.1%;
+      top: 4%;
+      margin: 0;
+      color: var(--amber);
+      font-size: clamp(8px, 0.86vw, 14px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: absolute;
+      z-index: 3;
+      left: 3.4%;
+      top: 9.5%;
+      width: 37%;
+      margin: 0;
+      font-size: clamp(22px, 3vw, 48px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.07em;
+    }
+
+    h1 small {
+      display: block;
+      margin-top: 0.65em;
+      color: var(--muted);
+      font-size: 0.24em;
+      font-weight: 500;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+    }
+
+    figure { margin: 0; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    .sheet {
+      position: absolute;
+      z-index: 6;
+      left: 2.5%;
+      top: 27%;
+      width: 18.4%;
+      height: 23%;
+      border: 6px solid var(--paper);
+      box-shadow: 8px 9px 0 rgba(17, 16, 14, 0.1), 0 0 0 1px var(--hairline);
+      transform: rotate(0.55deg);
+    }
+
+    .sheet img { object-position: center 52%; }
+
+    .sheet figcaption {
+      position: absolute;
+      left: -1px;
+      bottom: -14%;
+      font-size: clamp(6px, 0.55vw, 9px);
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .dough {
+      position: absolute;
+      z-index: 5;
+      left: 2.5%;
+      top: 56%;
+      width: 17.8%;
+      height: 29%;
+      border: 6px solid var(--paper);
+      box-shadow: 8px 9px 0 rgba(17, 16, 14, 0.12), 0 0 0 1px var(--hairline);
+      transform: rotate(-0.65deg);
+    }
+
+    .dough img { object-position: center 58%; }
+
+    .dough figcaption {
+      position: absolute;
+      left: 4%;
+      top: 4%;
+      padding: 2.5% 3%;
+      background: rgba(244, 241, 234, 0.9);
+      font-size: clamp(6px, 0.55vw, 9px);
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .whole {
+      position: absolute;
+      left: 13.1%;
+      top: 31%;
+      width: 31.5%;
+      height: 61%;
+      border-right: 7px solid var(--paper);
+    }
+
+    .whole img { object-position: center 46%; }
+
+    .whole figcaption {
+      position: absolute;
+      left: 0;
+      bottom: -3.1%;
+      font-size: clamp(6px, 0.55vw, 9px);
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      position: absolute;
+      z-index: 4;
+      left: 36.2%;
+      top: 34%;
+      width: 12.8%;
+      padding: 1.45% 1.25% 1.5% 1.6%;
+      background: rgba(244, 241, 234, 0.97);
+      border-left: 3px solid var(--amber);
+      box-shadow: 0 0 0 7px rgba(244, 241, 234, 0.92);
+    }
+
+    .intro p,
+    .mechanics p,
+    .ending p {
+      margin: 0;
+      font-size: clamp(8px, 0.72vw, 12px);
+      line-height: 1.82;
+      word-break: keep-all;
+    }
+
+    .vertical {
+      position: absolute;
+      z-index: 5;
+      left: 48.3%;
+      top: 18%;
+      writing-mode: vertical-rl;
+      font-size: clamp(6px, 0.56vw, 9px);
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .summit {
+      position: absolute;
+      left: 54.3%;
+      top: 5.6%;
+      width: 16.2%;
+      height: 16%;
+      border: 4px solid var(--paper);
+      box-shadow: 0 0 0 1px var(--hairline);
+    }
+
+    .summit figcaption {
+      margin-top: 4%;
+      font-size: clamp(6px, 0.58vw, 9px);
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+
+    .altitude {
+      position: absolute;
+      left: 73.2%;
+      top: 5%;
+      width: 22.5%;
+      margin: 0;
+      border-top: 1px solid var(--ink);
+      padding-top: 1.1%;
+      font-size: clamp(6px, 0.58vw, 10px);
+      line-height: 1.65;
+      letter-spacing: 0.06em;
+    }
+
+    .altitude strong {
+      display: block;
+      margin-bottom: 0.12em;
+      color: var(--amber);
+      font-size: 4.2em;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section {
+      position: absolute;
+      left: 53.3%;
+      top: 28%;
+      width: 28.5%;
+      height: 48%;
+      z-index: 2;
+      border: 6px solid var(--paper);
+      box-shadow: 0 0 0 1px var(--hairline);
+    }
+
+    .section img { object-position: center 48%; }
+
+    .section figcaption {
+      position: absolute;
+      left: 2%;
+      bottom: 2%;
+      padding: 1.8% 2.2%;
+      background: rgba(244, 241, 234, 0.9);
+      font-size: clamp(6px, 0.55vw, 9px);
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .mechanics {
+      position: absolute;
+      left: 83.3%;
+      top: 28%;
+      width: 13%;
+      padding-top: 1.2%;
+      border-top: 1px solid var(--ink);
+    }
+
+    .mechanics h2,
+    .ending h2 {
+      margin: 0 0 0.75em;
+      font-size: clamp(7px, 0.65vw, 11px);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .mechanics .formula {
+      display: block;
+      margin: 1.25em 0;
+      color: var(--amber);
+      font-size: clamp(12px, 1.35vw, 22px);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .ending {
+      position: absolute;
+      left: 53.3%;
+      top: 80%;
+      width: 21.5%;
+      padding-top: 1.1%;
+      border-top: 1px solid var(--ink);
+      z-index: 4;
+      padding: 1.1% 1% 1% 0;
+      background: rgba(244, 241, 234, 0.96);
+      box-shadow: 0 0 0 6px rgba(244, 241, 234, 0.92);
+    }
+
+    .snow {
+      position: absolute;
+      right: 3.4%;
+      bottom: 3.4%;
+      width: 29%;
+      height: 31%;
+      z-index: 3;
+      border: 7px solid var(--paper);
+      transform: rotate(-0.7deg);
+      transform-origin: center;
+      box-shadow: -9px 11px 0 rgba(163, 77, 32, 0.18), 0 0 0 1px var(--hairline);
+    }
+
+    .snow img { object-position: center 42%; }
+
+    .snow figcaption {
+      position: absolute;
+      right: 0;
+      top: -8%;
+      color: var(--ink);
+      font-size: clamp(6px, 0.58vw, 9px);
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .page-no {
+      position: absolute;
+      bottom: 1.5%;
+      font-size: clamp(6px, 0.53vw, 9px);
+    }
+
+    .page-no.left { left: 3.4%; }
+    .page-no.right { right: 3.4%; }
+
+    @media (max-width: 760px) {
+      body { display: block; padding: 0; background: var(--paper); }
+      .spread { width: 100%; box-shadow: none; }
+    }
+
+    @media print {
+      @page { size: A3 landscape; margin: 0; }
+      body { padding: 0; background: transparent; }
+      .spread { width: 420mm; height: 297mm; box-shadow: none; }
+      * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main class="spread" aria-label="눈꽃 몽블랑 잡지 양면 편집">
+    <p class="kicker">Minimirok · August 2026 · Food Mechanics</p>
+    <p class="number">No. 07</p>
+    <h1>몽블랑을<br>굽는 법<small>Mont Blanc, from oven to snow</small></h1>
+
+    <figure class="sheet">
+      <img src="./no-007_mont-blanc-laminated-ribbons.png" alt="넓은 페이스트리 생지를 길고 납작한 리본으로 재단한 상태">
+      <figcaption>00 · Sheet to ribbon — lamination</figcaption>
+    </figure>
+
+    <figure class="dough">
+      <img src="./no-007_mont-blanc-dough-oven.png" alt="성형한 몽블랑 페이스트리 생지가 오븐으로 들어가는 순간">
+      <figcaption>01 · Coiled form — before heat</figcaption>
+    </figure>
+
+    <figure class="whole">
+      <img src="./no-007_mont-blanc-whole.png" alt="검은 받침판 위의 온전한 몽블랑 페이스트리">
+      <figcaption>02 · The whole mountain — syrup &amp; fire</figcaption>
+    </figure>
+
+    <aside class="intro">
+      <p>오븐에서 막 나온 몽블랑은 작은 산 하나를 통째로 구워낸 모습이다. 나선형 능선 위로 얇은 설탕 시럽이 볕을 받은 바위처럼 반짝인다. 한 겹을 건드리면 바삭한 소리 뒤로 따뜻한 버터 향이 포개진다.</p>
+    </aside>
+
+    <div class="vertical">Sheet, ribbon, coil, heat, pressure, air and snow</div>
+
+    <figure class="summit">
+      <img src="./no-007_mont-blanc-summit-inset.png" alt="구름 위로 솟은 알프스 몽블랑 정상">
+      <figcaption>04 · 알프스의 흰 산. 이름이 시작된 곳.</figcaption>
+    </figure>
+
+    <p class="altitude"><strong>4,810m</strong>멀리서는 부드러운 흰 곡선이지만, 가까이에서는 바람과 얼음이 새긴 수많은 능선이 모습을 드러낸다.</p>
+
+    <figure class="section">
+      <img src="./no-007_mont-blanc-section.png" alt="빵칼로 반을 갈라 공기층을 드러낸 몽블랑 페이스트리">
+      <figcaption>03 · Section — air &amp; pressure</figcaption>
+    </figure>
+
+    <section class="mechanics">
+      <h2>Food mechanics · 01</h2>
+      <p>빵칼이 정상에서 내려오자 산의 속이 열린다. 커다란 빈 공간은 덜 채워진 자리가 아니다.</p>
+      <span class="formula">heat × steam<br>× butter</span>
+      <p>수분은 수증기로 팽창하고 버터는 층과 층을 밀어낸다. 겉은 얇게 부서지고 속은 공기를 머금는다. 열과 압력, 시간이 함께 세운 맛의 지형이다.</p>
+    </section>
+
+    <section class="ending">
+      <h2>The return · 눈이 내리다</h2>
+      <p>마지막으로 슈거 파우더를 내리면 식탁 위의 산에도 겨울이 온다. 하얀 가루 사이로 시럽의 호박빛 광택이 눈 녹은 햇살처럼 새어 나온다.</p>
+    </section>
+
+    <figure class="snow">
+      <figcaption>05 · Snow-blossom Mont Blanc</figcaption>
+      <img src="./no-007_snow-mont-blanc.png" alt="슈거 파우더가 능선을 따라 내려앉은 눈꽃 몽블랑">
+    </figure>
+
+    <span class="page-no left">18</span>
+    <span class="page-no right">19</span>
+  </main>
+</body>
+</html>
