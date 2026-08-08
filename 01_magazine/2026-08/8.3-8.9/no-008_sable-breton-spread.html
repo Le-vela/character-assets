@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No. 8. 사블레 브르통 — 사블레 브르통을 굽는 법</title>
+  <style>
+    :root {
+      --paper: #eee7da;
+      --paper-light: #f7f1e7;
+      --ink: #292219;
+      --muted: #766959;
+      --butter: #b86e2d;
+      --line: rgba(41, 34, 25, 0.32);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--ink);
+      background: #b9b0a1;
+      font-family: "Iowan Old Style", "Noto Serif KR", "Batang", Georgia, serif;
+    }
+
+    .spread {
+      position: relative;
+      width: min(100%, 1587px);
+      aspect-ratio: 420 / 297;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, transparent calc(50% - 1px), rgba(41, 34, 25, 0.17) 50%, transparent calc(50% + 1px)),
+        radial-gradient(circle at 18% 12%, rgba(184, 110, 45, 0.09), transparent 26%),
+        var(--paper);
+      box-shadow: 0 24px 70px rgba(30, 23, 15, 0.3);
+    }
+
+    .spread::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      pointer-events: none;
+      opacity: 0.23;
+      background-image: radial-gradient(rgba(45, 34, 23, 0.28) 0.42px, transparent 0.42px);
+      background-size: 5px 5px;
+      mix-blend-mode: multiply;
+    }
+
+    p, h1, h2, figure { margin: 0; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    .kicker {
+      position: absolute;
+      left: 3.4%;
+      top: 3.4%;
+      z-index: 6;
+      font-family: Arial, sans-serif;
+      font-size: clamp(7px, 0.65vw, 11px);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .number {
+      position: absolute;
+      left: 42.2%;
+      top: 4%;
+      z-index: 6;
+      color: var(--butter);
+      font-family: Arial, sans-serif;
+      font-size: clamp(8px, 0.78vw, 13px);
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      position: absolute;
+      left: 3.4%;
+      top: 9.3%;
+      z-index: 8;
+      width: 42%;
+      font-size: clamp(26px, 3.05vw, 49px);
+      font-weight: 500;
+      line-height: 1.09;
+      letter-spacing: -0.075em;
+    }
+
+    h1 small {
+      display: block;
+      margin-top: 0.78em;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.22em;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .opening {
+      position: absolute;
+      left: 3.4%;
+      top: 23.2%;
+      z-index: 9;
+      width: 42.5%;
+      font-size: clamp(7px, 0.68vw, 11px);
+      line-height: 1.68;
+      word-break: keep-all;
+    }
+
+    .dough {
+      position: absolute;
+      left: 2.5%;
+      top: 31%;
+      z-index: 4;
+      width: 33.5%;
+      height: 30%;
+      border: 7px solid var(--paper-light);
+      box-shadow: 9px 10px 0 rgba(72, 49, 28, 0.12), 0 0 0 1px var(--line);
+      transform: rotate(-0.6deg);
+    }
+
+    .dough img { object-position: center 53%; }
+
+    .oven {
+      position: absolute;
+      left: 17.4%;
+      bottom: 5.2%;
+      z-index: 5;
+      width: 31.5%;
+      height: 35.5%;
+      border: 7px solid var(--paper-light);
+      box-shadow: -9px 10px 0 rgba(184, 110, 45, 0.17), 0 0 0 1px var(--line);
+      transform: rotate(0.7deg);
+    }
+
+    .oven img { object-position: center 52%; }
+
+    figure figcaption {
+      position: absolute;
+      padding: 5px 7px;
+      background: rgba(247, 241, 231, 0.91);
+      font-family: Arial, sans-serif;
+      font-size: clamp(6px, 0.53vw, 9px);
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .dough figcaption { left: 2%; bottom: 3%; }
+    .oven figcaption { right: 2%; bottom: 3%; }
+
+    .hero {
+      position: absolute;
+      right: 2.4%;
+      top: 4.7%;
+      z-index: 2;
+      width: 50.5%;
+      height: 89.5%;
+      border: 8px solid var(--paper-light);
+      box-shadow: 0 0 0 1px var(--line);
+    }
+
+    .hero img { object-position: center center; }
+
+    .hero figcaption {
+      right: 2%;
+      top: 2%;
+      color: var(--paper-light);
+      background: rgba(41, 34, 25, 0.72);
+    }
+
+    .mechanics {
+      position: absolute;
+      left: 50.8%;
+      top: 51.5%;
+      z-index: 9;
+      width: 16.2%;
+      padding: 1.2% 1.25% 1.3%;
+      background: rgba(247, 241, 231, 0.95);
+      box-shadow: 0 0 0 6px rgba(238, 231, 218, 0.72);
+    }
+
+    .mechanics h2,
+    .ending h2 {
+      margin-bottom: 0.8em;
+      font-family: Arial, sans-serif;
+      font-size: clamp(7px, 0.62vw, 10px);
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .mechanics p,
+    .ending p {
+      font-size: clamp(7px, 0.67vw, 11px);
+      line-height: 1.78;
+      word-break: keep-all;
+    }
+
+    .formula {
+      display: block;
+      margin: 0.8em 0;
+      color: var(--butter);
+      font-size: clamp(14px, 1.5vw, 24px);
+      font-style: italic;
+      line-height: 1.15;
+    }
+
+    .ending {
+      position: absolute;
+      right: 4.2%;
+      bottom: 7%;
+      z-index: 10;
+      width: 26%;
+      padding: 1.2% 1.4%;
+      background: rgba(247, 241, 231, 0.93);
+      border-left: 3px solid var(--butter);
+    }
+
+    .vertical {
+      position: absolute;
+      left: 48.7%;
+      top: 8%;
+      z-index: 8;
+      writing-mode: vertical-rl;
+      color: var(--paper-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(6px, 0.53vw, 9px);
+      letter-spacing: 0.2em;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.45);
+      text-transform: uppercase;
+    }
+
+    .page-no {
+      position: absolute;
+      bottom: 1.45%;
+      z-index: 12;
+      font-family: Arial, sans-serif;
+      font-size: clamp(6px, 0.52vw, 9px);
+    }
+
+    .page-no.left { left: 3.4%; }
+    .page-no.right { right: 3.4%; }
+
+    @media (max-width: 760px) {
+      body { display: block; padding: 0; background: var(--paper); }
+      .spread { width: 100%; box-shadow: none; }
+    }
+
+    @media print {
+      @page { size: A3 landscape; margin: 0; }
+      body { padding: 0; background: transparent; }
+      .spread { width: 420mm; height: 297mm; box-shadow: none; }
+      * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main class="spread" aria-label="사블레 브르통 잡지 양면 편집">
+    <p class="kicker">Minimirok · August 2026 · Popular Bakery Journey</p>
+    <p class="number">No. 08</p>
+    <h1>사블레 브르통을<br>굽는 법<small>Sablé Breton · Brittany, France</small></h1>
+
+    <p class="opening">사블레 브르통은 프랑스 브르타뉴 지방의 두꺼운 버터 쿠키다. 버터와 달걀노른자의 풍미가 진하고, 소금이 단맛과 고소함을 또렷하게 만든다. 겉은 바삭하고 속은 포슬포슬하게 부서지는 식감이 핵심이다.</p>
+
+    <figure class="dough">
+      <img src="./images/no-008_sable-breton-dough.png" alt="두껍게 밀어 원형으로 자른 사블레 브르통 반죽">
+      <figcaption>01 · Butter, yolk, flour — cut thick</figcaption>
+    </figure>
+
+    <figure class="oven">
+      <img src="./images/no-008_sable-breton-oven.png" alt="틀 안에서 황금빛으로 구워지는 사블레 브르통">
+      <figcaption>02 · Ring, heat, golden edge</figcaption>
+    </figure>
+
+    <figure class="hero">
+      <img src="./images/no-008_sable-breton.png" alt="완성된 사블레 브르통과 모래처럼 부서지는 단면">
+      <figcaption>03 · Sablé Breton — the sandy crumb</figcaption>
+    </figure>
+
+    <div class="vertical">Brittany · butter · salt · heat · sand</div>
+
+    <section class="mechanics">
+      <h2>Food mechanics · 02</h2>
+      <p>차가운 반죽을 두껍게 자른 뒤 원형 틀 안에서 굽는다. 틀은 반죽이 옆으로 퍼지는 것을 막아 일정한 높이를 만든다.</p>
+      <span class="formula">ring + heat<br>+ cooling</span>
+      <p>베이킹파우더와 버터의 수분은 속을 가볍게 부풀리고, 열은 가장자리부터 짙은 황금색과 바삭한 껍질을 만든다.</p>
+    </section>
+
+    <section class="ending">
+      <h2>바삭함과 부서짐</h2>
+      <p>오븐에서 꺼낸 직후에는 아직 부드럽지만 한김 식으면 표면이 단단해진다. 가장자리는 바삭하고 속은 모래처럼 잘게 부서진다. 짭조름한 버터 향 뒤로 달걀노른자의 고소함과 구운 설탕의 단맛이 이어진다.</p>
+    </section>
+
+    <span class="page-no left">20</span>
+    <span class="page-no right">21</span>
+  </main>
+</body>
+</html>
