@@ -1,7 +1,8 @@
 ---
 type: food-entry
 status: published
-series: "세계 베이커리 기행"
+series: "세계 베이커리의 기본 미학 — 프랑스편"
+chapter: 1
 issue: "2026-08"
 week: "8.3-8.9"
 no: 6
