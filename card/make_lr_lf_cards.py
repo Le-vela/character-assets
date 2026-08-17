@@ -356,6 +356,24 @@ MENU = [
         "taste": [("Balanced base", "Balance", 88), ("Protein focus", "Umami", 72), ("Vegetable lift", "Freshness", 82), ("Moderate body", "Body", 70), ("Clean finish", "Finish", 78)],
         "notes": ["Base: grain, protein, vegetables, fruit", "Texture: separated sections with varied bite", "Aroma: depends on main dish and sauce", "Pairing: soup cup, tea, sparkling water"],
     },
+    {
+        "id": "040",
+        "code": "cjp",
+        "ko": "냉짬뽕",
+        "en": "COLD JJAMPPONG",
+        "hero_path": str(ASSET_CARD / "summer-food-2026" / "assets" / "040_cjp_hero.png"),
+        "desc": "A chilled seafood noodle card with springy wheat noodles, crisp vegetables, and bright spicy broth.",
+        "servings": "1 bowl",
+        "time": "20 min",
+        "level": "Medium",
+        "cost": "Est. 13,000 KRW",
+        "ingredients": [("Wheat noodles", "120g"), ("Shrimp, squid, mussels", "180g"), ("Chilled spicy broth", "400ml"), ("Cucumber and onion", "100g"), ("Vinegar and mustard", "to taste"), ("Ice", "as needed")],
+        "steps": ["Cook seafood and chill it quickly", "Boil noodles and rinse until cold", "Season and chill the spicy broth", "Arrange with vegetables, seafood, and ice"],
+        "point": "Thoroughly rinsed noodles and fully chilled broth keep the finish crisp instead of heavy.",
+        "dining": "A chilled Korean-Chinese seafood noodle bowl balancing briny depth, vivid chili, clean acidity, and an ice-cold finish.",
+        "taste": [("Ocean savor", "Umami", 86), ("Chili brightness", "Spice", 78), ("Vinegar lift", "Acidity", 72), ("Noodle spring", "Texture", 82), ("Icy finish", "Finish", 92)],
+        "notes": ["Broth: chilled seafood stock with chili and vinegar", "Texture: springy noodles, crisp vegetables, tender seafood", "Aroma: ocean brine, chili, cucumber", "Pairing: fried dumplings, pickled radish, cold lager"],
+    },
 ]
 
 
@@ -380,6 +398,7 @@ PRONUNCIATION = {
     "018": "haem-beo-geo seh-teu",
     "019": "deop-bap",
     "020": "doh-see-rahk",
+    "040": "neng-jjam-ppong",
 }
 
 
@@ -458,6 +477,8 @@ def qr_image(url, size=150, color=(0, 0, 0)):
 
 
 def food_crop(item):
+    if item.get("hero_path"):
+        return Image.open(item["hero_path"]).convert("RGB")
     src = Image.open(LM_SRC / f"{item['id']}_{item['code']}.png").convert("RGB")
     return src.crop((28, 350, 552, 858))
 

@@ -1,0 +1,40 @@
+{
+  "collection": "Food MaAM Summer 2026",
+  "schema_version": 1,
+  "reference_card": "card/lm-card/001_kmj.png",
+  "existing_duplicate": {
+    "name_ko": "냉면",
+    "existing_id": "008",
+    "existing_code": "nmy",
+    "path": "card/lm-card/008_nmy.png"
+  },
+  "new_card_count": 20,
+  "category_counts": {
+    "차가운 면": 6,
+    "시원한 별미": 8,
+    "보양식": 4,
+    "디저트": 2
+  },
+  "cards": [
+    {"id":"021","code":"mgs","name_ko":"막국수","name_en":"MAKGUKSU","category":"차가운 면","hero":"동치미 육수 또는 비빔 양념의 메밀면, 오이와 김가루","character_prop":"메밀면 그릇과 젓가락","status":"planned"},
+    {"id":"022","code":"mhl","name_ko":"물회","name_en":"MULHOE","category":"시원한 별미","hero":"얼음 띄운 새콤매콤 육수, 신선한 회와 채소","character_prop":"투명한 물회 볼과 국자","status":"planned"},
+    {"id":"023","code":"bng","name_ko":"빙수","name_en":"BINGSU","category":"디저트","hero":"곱게 간 우유 얼음과 팥, 인절미 토핑","character_prop":"빙수 볼과 작은 스푼","status":"planned"},
+    {"id":"024","code":"jeg","name_ko":"장어구이","name_en":"GRILLED EEL","category":"보양식","hero":"윤기 나는 간장 양념 장어구이와 생강채","character_prop":"장어구이 접시와 집게","status":"planned"},
+    {"id":"025","code":"kgs","name_ko":"콩국수","name_en":"KONGGUKSU","category":"차가운 면","hero":"진하고 매끈한 콩국물, 소면과 오이채","character_prop":"흰 콩국수 그릇과 젓가락","status":"planned"},
+    {"id":"026","code":"cgn","name_ko":"초계국수","name_en":"CHOGYE GUKSU","category":"시원한 별미","hero":"겨자 향의 차가운 닭육수, 닭고기와 면","character_prop":"차가운 닭국수 볼과 국자","status":"planned"},
+    {"id":"027","code":"mlm","name_ko":"밀면","name_en":"MILMYEON","category":"차가운 면","hero":"살얼음 육수의 밀면, 편육과 달걀 고명","character_prop":"스테인리스 밀면 그릇","status":"planned"},
+    {"id":"028","code":"ymg","name_ko":"열무국수","name_en":"YEOLMU GUKSU","category":"차가운 면","hero":"열무김치 국물과 소면, 아삭한 열무","character_prop":"열무국수 그릇과 젓가락","status":"planned"},
+    {"id":"029","code":"msb","name_ko":"메밀소바","name_en":"MEMIL SOBA","category":"차가운 면","hero":"차갑게 헹군 메밀면과 쯔유, 무즙과 파","character_prop":"소바 채반과 쯔유 잔","status":"planned"},
+    {"id":"030","code":"cud","name_ko":"냉우동","name_en":"COLD UDON","category":"차가운 면","hero":"탱글한 우동면과 차가운 쯔유, 무와 쪽파","character_prop":"냉우동 볼과 굵은 젓가락","status":"planned"},
+    {"id":"031","code":"dms","name_ko":"도토리묵사발","name_en":"DOTORI MUKSABAL","category":"시원한 별미","hero":"차가운 육수 속 도토리묵, 김치와 김가루","character_prop":"묵사발과 국자","status":"planned"},
+    {"id":"032","code":"ocg","name_ko":"오이냉국","name_en":"OI NAENGGUK","category":"시원한 별미","hero":"투명한 새콤 육수, 오이채와 미역, 얼음","character_prop":"유리 냉국 볼","status":"planned"},
+    {"id":"033","code":"njb","name_ko":"냉채족발","name_en":"NAENGCHAE JOKBAL","category":"시원한 별미","hero":"얇게 썬 족발과 채소, 톡 쏘는 겨자 소스","character_prop":"냉채족발 플래터와 집게","status":"planned"},
+    {"id":"034","code":"gbm","name_ko":"골뱅이무침","name_en":"GOLBAENGI MUCHIM","category":"시원한 별미","hero":"새콤매콤한 골뱅이와 오이, 양파, 소면","character_prop":"무침 접시와 비빔 집게","status":"planned"},
+    {"id":"035","code":"sgt","name_ko":"삼계탕","name_en":"SAMGYETANG","category":"보양식","hero":"영계 속 찹쌀과 인삼, 대추가 든 맑은 백숙","character_prop":"뚝배기와 작은 국자","status":"planned"},
+    {"id":"036","code":"mnh","name_ko":"민어회","name_en":"MINEO HOE","category":"시원한 별미","hero":"두툼하고 반투명한 민어회와 곁들임","character_prop":"민어회 접시와 젓가락","status":"planned"},
+    {"id":"037","code":"jbj","name_ko":"전복죽","name_en":"ABALONE PORRIDGE","category":"보양식","hero":"전복 내장의 녹진함이 감도는 쌀죽과 전복 슬라이스","character_prop":"전복죽 그릇과 숟가락","status":"planned"},
+    {"id":"038","code":"nyt","name_ko":"낙지연포탕","name_en":"NAKJI YEONPOTANG","category":"보양식","hero":"맑은 국물 속 부드러운 낙지와 무, 미나리","character_prop":"연포탕 냄비와 국자","status":"planned"},
+    {"id":"039","code":"sbh","name_ko":"수박화채","name_en":"WATERMELON HWACHAE","category":"디저트","hero":"수박 볼과 제철 과일을 담은 시원한 화채","character_prop":"유리 화채 볼과 스푼","status":"planned"},
+    {"id":"040","code":"cjp","name_ko":"냉짬뽕","name_en":"COLD JJAMPPONG","category":"시원한 별미","hero":"얼음 띄운 새콤매콤 해산물 육수, 면과 오징어·새우·홍합","character_prop":null,"card_scope":"lf_only","status":"composed"}
+  ]
+}
