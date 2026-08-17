@@ -3,3 +3,8 @@
 **/winlose_khan.glb filter=private-image -diff -merge
 **/winlose_bgj.glb filter=private-image -diff -merge
 # private-image-filter:end
+
+# Summer Local Fine Dining cards 021-040 (Git LFS test)
+card/lf-card/02[1-9]_*_lf.png filter=lfs diff=lfs merge=lfs -text
+card/lf-card/03[0-9]_*_lf.png filter=lfs diff=lfs merge=lfs -text
+card/lf-card/040_*_lf.png filter=lfs diff=lfs merge=lfs -text
